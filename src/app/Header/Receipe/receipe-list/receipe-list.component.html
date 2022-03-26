@@ -1,1 +1,14 @@
-<p>receipe-list works!</p>
+<h2>Receipes</h2>
+<ul *ngFor="let receipe of receipes" class="list-unstyled">
+  <li style="width: fit-content;">
+    <div class="row">
+        <div class="col-md-12">
+        <a href="#" class="list-group-item clearfix">
+            <span style="margin-right: 2rem;">{{ receipe.name }}</span>
+            <span style="margin-right: 2rem;">{{ receipe.description }}</span>
+            <img [src]="receipe.imagePath" alt="receipe image" style="max-height: 6rem;">
+        </a>
+        </div>
+    </div>
+  </li>
+</ul>
